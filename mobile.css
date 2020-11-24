@@ -5,6 +5,11 @@ background-size: cover;
 margin: 0 auto;
 }
 
+.title{
+font-weight: bold;
+color: white;
+}
+
 #pswdgen{
 background-image: url("/mobile/passicon.png");
 }

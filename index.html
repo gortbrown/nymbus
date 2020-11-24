@@ -1,7 +1,5 @@
-<! DOCTYPE html>
 <html>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <head>
+<head>
         <!--Windows info-->
 	<meta name="msapplication-TileImage" content="icon.png">
 	<meta name="msapplication-TileColor" content="#002e58">
@@ -19,17 +17,19 @@
 	<link rel="stylesheet" type="text/css" href="mobile.css">
 	<link rel="manifest" href="manifest.json">
     </head>
-   <body ng-app="pswdgen" ng-controller="generate">
-       <div class="top">
-           <img id="logo" src="icon1.png"/>
-       </div>
-       <div class="main">
-           <h1 class="title">{{passphrase}}</h1>
-           <input class="input" type="text" ng-model="word1" placeholder="Enter word 1"/>
-           <input class="input" type="text" ng-model="word2" placeholder="Enter word 2"/>
-           <input class="input" type="text" ng-model="word3" placeholder="Enter word 3"/>
-           <button class="group" type="button" ng-click="passphrase = word1 + word2 + word3 + num">Generate</button>
-           <div class="tips">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div class="top">
+  <img id="logo" src="icon1.png"/>
+</div>
+<div class="main" ng-app="">
+  <h1 class="title">Passphrase Generator</h1>
+  <h2 class="title">{{word2}}{{word1}}{{word3}}</h2>
+  <input class="input" type="text" ng-model="word1" placeholder="Enter word 1">
+  <input class="input" type="text" ng-model="word2" placeholder="Enter word 2">
+  <input class="input" type="text" ng-model="word3" placeholder="Enter word 3">
+</div>
+<div class="tips">
                <div id="spacer2"></div>
                <div class="main">
                 <h2>Why this is important</h2>
@@ -61,12 +61,5 @@
         <!--<img src="scamicon.png" class="nav-idle" id="phishing" onclick="window.open('https://phishingquiz.withgoogle.com')"></img>-->
         </div>
        </div>
-   </body>
-   <script type="module">
-    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-
-    const el = document.createElement('pwa-update');
-    document.body.appendChild(el);
-    </script>
-    <script src="script.js"></script>
-   </html>
+</body>
+</html>
